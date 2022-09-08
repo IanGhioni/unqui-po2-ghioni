@@ -4,15 +4,13 @@ import java.util.ArrayList;
 
 public class Counter {
 	private ArrayList<Integer> lista;
-	
-	public void setLista(ArrayList<Integer> lista) {
-		this.lista = lista;
+
+	public void addNumber(int x) {
+		lista.add(x);
 	}
 	
-	public ArrayList<Integer> getLista() {
-		return this.lista;
-	}
 	
+	// Punto a)
 	public int cantidadDePares() {
 		int Contador = 0;
 		
@@ -32,11 +30,58 @@ public class Counter {
 		}
 	}
 
-	public boolean esPar(int hola) {
-		int x;
-		x = hola;
+	public boolean esPar(int x) {
 		return ((x % 2) == 0);
 	}
-}
 
 	
+	
+	// Punto b)
+	public int cantidadDeImpares() {
+		int Contador = 0;
+		
+		for (int number: lista) {
+			Contador = Contador + (this.devolver1SiEsImpar(number));
+		}
+		return Contador;
+	}
+	
+	public int devolver1SiEsImpar(Integer x) {
+		if (esImpar(x)) {
+			return 1;
+		}
+		else {
+			return 0;
+		}
+	}
+	
+	public boolean esImpar(int x) {
+		return ((x % 2)==1);
+	}
+	
+	
+	
+	// Punto c)
+	public int cantidadDeMultiplos(int x) {
+		int Counter = 0;
+		
+		for (int number: lista) {
+			Counter += this.devolver1SiEsMultiploDe(number , x);
+		}
+		return Counter;
+	}
+	
+	public int devolver1SiEsMultiploDe(int number,int x) {
+		if (esMultiplo(number,x)) {
+			return 1;
+		}
+		else {
+			return 0;
+		}
+	}
+	
+	public boolean esMultiplo(int number,int x) {
+		return ((number % x) == 0);
+	}
+	
+}
