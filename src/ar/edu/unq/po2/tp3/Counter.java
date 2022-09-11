@@ -10,6 +10,8 @@ public class Counter {
 	}
 	
 	
+	//EJERCICIO 1
+	
 	// Punto a)
 	public int cantidadDePares() {
 		int Contador = 0;
