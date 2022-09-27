@@ -3,12 +3,11 @@ package ar.edu.unq.po2.tp3;
 import java.util.ArrayList;
 
 public class Counter {
-	private ArrayList<Integer> lista;
+	private ArrayList<Integer> lista = new ArrayList<Integer>();
 
 	public void addNumber(int x) {
 		lista.add(x);
 	}
-	
 	
 	//EJERCICIO 1
 	
@@ -22,7 +21,7 @@ public class Counter {
 		return Contador;
 	}
 		
-	public int devolver1SiEsPar(Integer x) {
+	public int devolver1SiEsPar(int x) {
 		
 		if (esPar(x)) {
 			return 1;
@@ -35,8 +34,6 @@ public class Counter {
 	public boolean esPar(int x) {
 		return ((x % 2) == 0);
 	}
-
-	
 	
 	// Punto b)
 	public int cantidadDeImpares() {
@@ -48,7 +45,7 @@ public class Counter {
 		return Contador;
 	}
 	
-	public int devolver1SiEsImpar(Integer x) {
+	public int devolver1SiEsImpar(int x) {
 		if (esImpar(x)) {
 			return 1;
 		}
@@ -60,8 +57,6 @@ public class Counter {
 	public boolean esImpar(int x) {
 		return ((x % 2)==1);
 	}
-	
-	
 	
 	// Punto c)
 	public int cantidadDeMultiplos(int x) {
