@@ -5,7 +5,7 @@ public class Point {
 	private int y;
 	 
 	// Constructor
-	Point() {
+	public Point() {
 		this.setX(0);
 		this.setY(0);
 	}
