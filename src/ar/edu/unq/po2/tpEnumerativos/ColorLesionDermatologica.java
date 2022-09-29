@@ -33,7 +33,4 @@ public enum ColorLesionDermatologica {
 		this.nivelDeRiesgo = nivelDeRiesgo;
 	}
 	
-	public ColorLesionDermatologica next() {
-		return this.next();
-	}
 }
